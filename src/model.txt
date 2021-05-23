@@ -1,0 +1,26 @@
+      <Model url="/行政大樓.glb" position={[66.7, 0, 130]} now={now.current} />
+      <Model url="/A棟.glb" position={[84.7, 0, 167.8]} now={now.current} visible={F}/>
+      <Model url="/C棟.glb" position={[40, 0, 46]} now={now.current} />
+      <Model url="/E棟.glb" position={[30, 0, 24.5]} now={now.current} />
+      <Model url="/F棟.glb" position={[18.5, 0, 7.6]} now={now.current} />
+      <Model url="/G棟.glb" position={[-16.47, 0, -16.47]} now={now.current} />
+      <Model url="/H棟.glb" position={[-18, 0, -35.3]} now={now.current} />
+      <Model url="/J棟.glb" position={[-22.3, 0, -51.67]} now={now.current} />
+      <Model url="/K棟.glb" position={[-23.59, 0, -67.8]} now={now.current} />
+      <Model url="/O棟.glb" position={[19.52, 0, -52.11]} now={now.current} />
+      <Model url="/P棟.glb" position={[14.66, 0, -66.28]} now={now.current} />
+      <Model url="/Q棟.glb" position={[4.89, 0, -81.93]} now={now.current} />
+      <Model url="/R棟.glb" position={[-1.89, 0, -90.31]} now={now.current} />
+      <Model url="/水塔.glb" position={[-49, 0, -1.6]} now={now.current} />
+      <Model url="/水禽.glb" position={[-83.54, 0, -99.69]} now={now.current} />
+      <Model url="/水肥.glb" position={[-112.54, 0, -152.1]} now={now.current} />
+      <Model url="/大牛.glb" position={[-53, 0, 26]} now={now.current}/>
+      <Model url="/小牛.glb" position={[-52.11, 0, -19.52]} now={now.current} />
+      <Model url="/雞一.glb" position={[-36.5, 0, -79.43]} now={now.current} />
+      <Model url="/雞二.glb" position={[-44.75, 0, -90.03]} now={now.current} />
+      <Model url="/雞三.glb" position={[-48.39, 0, -101.85]} now={now.current} />
+      <Model url="/雞四.glb" position={[-52.68, 0, -109.91]} now={now.current} />
+      <Model url="/馬.glb" position={[-72.84, 0, -60.4]} now={now.current} />
+
+
+ 

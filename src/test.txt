@@ -1,0 +1,54 @@
+
+const OrbitControls = oc(THREE)
+
+const renderer = createRenderer();
+const scene = createScene();
+const camera = createCamera();
+const interactionManager = new InteractionManager(
+  renderer,
+  camera,
+  renderer.domElement
+); 
+
+const cubes = {
+  pink: createCube({ color: 0xff00ce, x: -1, y: 1,z:1}),
+  purple: createCube({ color: 0x9300fb, x: 1, y: -1 ,z:2}),
+  blue: createCube({ color: 0x0065d9, x: 1, y:1 ,z:0}),
+  cyan: createCube({ color: 0x00d7d0, x: -1, y: -1,z:1.5})
+};
+
+const light = new THREE.PointLight(0xffffff, 1, 1000);
+light.position.set(-10, -10, -10);
+const light2 = new THREE.PointLight(0xffffff, 1, 1000);
+light2.position.set(10, 10, 10);
+
+
+for (const [name, object] of Object.entries(cubes)) {
+  object.addEventListener("click", (event) => {
+    event.stopPropagation();
+    console.log(`${name} cube was clicked`);
+    const cube = event.target;
+    const coords = { x: camera.position.x, y: camera.position.y ,z: camera.position.z};
+    new TWEEN.Tween(coords)
+      .to({ x: cube.position.x, y: cube.position.y ,z:cube.position.z})
+      .easing(TWEEN.Easing.Quadratic.Out)
+      .onUpdate(() =>
+        camera.position.set(coords.x, coords.y,cube.position.z+2.5)
+      )
+      .start();
+  });
+  interactionManager.add(object);
+  scene.add(object);
+}
+
+scene.add(light);
+scene.add(light2);
+const controls = new OrbitControls( camera, renderer.domElement );
+
+animate((time) => {
+  controls.update();
+  renderer.render(scene, camera);
+  interactionManager.update();
+  TWEEN.update(time);
+  
+});
